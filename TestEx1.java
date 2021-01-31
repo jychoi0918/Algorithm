@@ -4,28 +4,28 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class TestEx1 {
-	///////////////////////¤Ä///////////////////////////////////
-	//¹®Á¦ 													//
-	//Ã¹Â° ÁÙ¿¡ Á¤·ÄÇÏ°íÀÚ ÇÏ´Â ¼ö NÀº 1,000,000,000 º¸´Ù ÀÛ°Å³ª °°Àº ÀÚ¿¬¼öÀÌ´Ù   //
-	//Ã¹Â°ÁÙ¿¡ ÀÚ¸®¼ö¸¦ ³»¸²Â÷¼øÀ¸·Î Á¤·ÄÇÑ ¼ö¸¦ Ãâ·ÂÇÑ´Ù.				    //
-	//														//
-	//³ªÀÇ »ı°¢													//
-	//1. °ªÀ» ÀÔ·ÂÇÑ´Ù ( return  ¸¸¾à 0º¸´ÙÀÛ°Å³ª, 1,000,000,000 ÃÊ°ú ) //
-	//=>while ¹®À¸·Î µ¹·Á¸é?									    //
-	//2. °¢ÀÚÀÇ ¼ıÀÚ¸¦ ºĞ¸®ÇÏ¿© ¹è¿­À» ¸¸µê 							    //
-	//3. ³»¸²Â÷¼ø Á¤·ÄÀ» ÇØ¼­ Ãâ·Â								    //
+	///////////////////////ã…”///////////////////////////////////
+	//ë¬¸ì œ 												
+	//ì²«ì§¸ ì¤„ì— ì •ë ¬í•˜ê³ ì í•˜ëŠ” ìˆ˜ Nì€ 1,000,000,000 ë³´ë‹¤ ì‘ê±°ë‚˜ ê°™ì€ ìì—°ìˆ˜ì´ë‹¤   
+	//ì²«ì§¸ì¤„ì— ìë¦¬ìˆ˜ë¥¼ ë‚´ë¦¼ì°¨ìˆœìœ¼ë¡œ ì •ë ¬í•œ ìˆ˜ë¥¼ ì¶œë ¥í•œë‹¤.				   
+	//													
+	//ë‚˜ì˜ ìƒê°												
+	//1. ê°’ì„ ì…ë ¥í•œë‹¤ ( return  ë§Œì•½ 0ë³´ë‹¤ì‘ê±°ë‚˜, 1,000,000,000 ì´ˆê³¼ ) 
+	//=>while ë¬¸ìœ¼ë¡œ ëŒë ¤ë©´?									 
+	//2. ê°ìì˜ ìˆ«ìë¥¼ ë¶„ë¦¬í•˜ì—¬ ë°°ì—´ì„ ë§Œë“¦ 							   
+	//3. ë‚´ë¦¼ì°¨ìˆœ ì •ë ¬ì„ í•´ì„œ ì¶œë ¥								 
 	//////////////////////////////////////////////////////////
 	
 	public void getNumberArray(String  Number) {
 //	System.out.println(Number);
 //		Scanner scanner = new Scanner(System.in);
-//		System.out.println("0ÃÊ°ú 1,000,000,000 ¹Ì¸¸ÀÇ ¼ö¸¦ ÀÔ·ÂÇØ ÁÖ½Ã±â ¹Ù¶ø´Ï´Ù.");
-//		String Number = String.valueOf(scanner.nextInt());  ==> Scanner ·Î ÀĞÀ¸¸é ¿Ö ¾ÈµÅ? Á»´õ ¾Ë¾Æº¸±â!
+//		System.out.println("0ì´ˆê³¼ 1,000,000,000 ë¯¸ë§Œì˜ ìˆ˜ë¥¼ ì…ë ¥í•´ ì£¼ì‹œê¸° ë°”ëë‹ˆë‹¤.");
+//		String Number = String.valueOf(scanner.nextInt());  ==> Scanner ë¡œ ì½ìœ¼ë©´ ì™œ ì•ˆë¼? ì¢€ë” ì•Œì•„ë³´ê¸°!
 		
 			
 		try {
-		if(Integer.parseInt(Number)>0 && Integer.parseInt(Number)<1000000000) {//¹üÀ§
-			//¹è¿­ ¸¸µé±â
+		if(Integer.parseInt(Number)>0 && Integer.parseInt(Number)<1000000000) {//ë²”ìœ„
+			//ë°°ì—´ ë§Œë“¤ê¸°
 			int [] numarr =new int [Number.length()];
 			for (int i = 0; i <numarr.length; i++) {
 			numarr[i]=Integer.parseInt(Number.substring(i,i+1));
@@ -33,7 +33,7 @@ public class TestEx1 {
 
 		int tmp = 0;
 		System.out.println("Input Number: "+Number);
-		//³»¸²Â÷¼ø¹è¿­ 
+		//ë‚´ë¦¼ì°¨ìˆœë°°ì—´ 
 		for (int i = 0; i < numarr.length; i++) {
 			for (int j = 0; j < numarr.length-1; j++) {
 				if(numarr[j] < numarr[j+1]) {
@@ -43,23 +43,23 @@ public class TestEx1 {
 				}
 			}
 		}
-		//°á°ú Ãâ·Â
+		//ê²°ê³¼ ì¶œë ¥
 		System.out.print("Output Number: ");
 		for(int data:numarr)
 		 System.out.print(data);
 		
 		}else {
-			System.out.println("Àß¸øµÈ °ªÀ» ³Ö¾ú½À´Ï´Ù.");
+			System.out.println("ì˜ëª»ëœ ê°’ì„ ë„£ì—ˆìŠµë‹ˆë‹¤.");
 		}
 		} catch (Exception e) {
 			// TODO: handle exception
-			System.out.println("¿À·ù°ªÀÔ´Ï´Ù.");
+			System.out.println("ì˜¤ë¥˜ê°’ì…ë‹ˆë‹¤.");
 		}
 	}
 	
 	public static void main(String[] args) {
 		TestEx1 ct = new TestEx1();
 		ct.getNumberArray("1000000001");
-		//¹®ÀÚ¿­ ¸»°í ¼ıÀÚ·Î ³ÖÀ» ¹æ¹ıÀº ¾øÀ»±î?
+		//ë¬¸ìì—´ ë§ê³  ìˆ«ìë¡œ ë„£ì„ ë°©ë²•ì€ ì—†ì„ê¹Œ?
 	}
 }
